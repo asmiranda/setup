@@ -1,0 +1,4 @@
+PMA_PASSWORD=Miran!11
+PMA_HOST=dynamikosoft.com
+MYSQL_ROOT_PASSWORD=Miran!11
+MYSQL_PASSWORD=dynamikodb
