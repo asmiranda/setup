@@ -19,18 +19,6 @@ services:
     environment:
       - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@dynamikosoft.com:3306/dynamikodb
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin-wordpress
-    environment:
-      PMA_PORT: 3306
-      PMA_ARBITRARY: 1
-    volumes:
-      - /root/setup/phpmyadmin:/run/secrets
-    restart: always
-    ports:
-      - 8080:80      
-          
   # dynamiko-coturn:
   #   image: instrumentisto/coturn
   #   container_name: "Dynamiko_Coturn"
