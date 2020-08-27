@@ -7,7 +7,7 @@ sudo git checkout .
 sudo git pull 
 sudo chmod -R 777 .
 sudo chmod -R 777 installation/.
-sudo mkdir /root/tmp
+sudo mkdir ${setup_tmp}
 
 # installation/0-install-initsetup.sh
 installation/1-install-getsource.sh
