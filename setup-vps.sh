@@ -5,7 +5,6 @@ export setup_tmp=/root/tmp
 
 sudo git checkout .
 sudo git pull 
-sudo git checkout .
 sudo chmod -R 777 .
 sudo chmod -R 777 installation/.
 sudo mkdir ${setup_tmp}
