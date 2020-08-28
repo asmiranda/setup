@@ -1,4 +1,4 @@
-echo "a7 - ************Start Certbot Setup************"
+echo "a7 - ************Start Coturn Setup************"
 
 cd ${setup_dir}
 
