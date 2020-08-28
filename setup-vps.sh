@@ -25,7 +25,7 @@ installation/a2-install-dynamiko-docker.sh
 # installation/a4-install-python.sh
 # installation/a5-install-certbot.sh
 # installation/a7-install-coturn.sh
-installation/a8-install-firewall.sh
+# installation/a8-install-firewall.sh
 
 sudo ufw disable 
 
