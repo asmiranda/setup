@@ -14,8 +14,6 @@ sudo apt-get -y install mysql-server
 
 sudo cp ${setup_dir}/conf.d/mysqld.conf /etc/mysql/mysql.conf.d/mysqld.cnf
 
-# sudo ufw enable
-# sudo ufw allow mysql
 sudo systemctl start mysql
 sudo systemctl enable mysql
 

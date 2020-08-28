@@ -25,8 +25,7 @@ installation/a3-install-nginxproxy.sh
 # installation/a4-install-python.sh
 # installation/a5-install-certbot.sh
 installation/a7-install-coturn.sh
-
-sudo ufw disable
+installation/a8-install-firewall.sh
 
 cd ${setup_dir}
 echo "-- setup dir --- "
