@@ -28,7 +28,7 @@ sudo ufw allow socketio
 sudo ufw allow flask
 sudo ufw allow python
 
-sudo ufw enable
+# sudo ufw enable
 sudo ufw disable 
 
 cd ${setup_dir}
