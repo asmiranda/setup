@@ -24,7 +24,11 @@ sudo ufw allow 3306/tcp
 sudo ufw allow mysql
 sudo ufw allow http
 sudo ufw allow https
+sudo ufw allow socketio
+sudo ufw allow flask
+sudo ufw allow python
 
 sudo ufw enable
+sudo ufw disable 
 
 cd ${setup_dir}
