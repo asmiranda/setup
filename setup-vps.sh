@@ -27,6 +27,9 @@ installation/a2-install-dynamiko-docker.sh
 # installation/a7-install-coturn.sh
 installation/a8-install-firewall.sh
 
+sudo ufw disable 
+
+
 cd ${setup_dir}
 echo "-- setup dir --- "
 pwd
