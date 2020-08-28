@@ -2,7 +2,7 @@ echo "5 - ************Start Nginx Setup************"
 
 cd ${setup_dir}
 
-sudo mkdir ${setup_tmp}p/nginx
+sudo mkdir ${setup_tmp}/nginx
 cd ${setup_tmp}/nginx
 
 sudo apt update -y
