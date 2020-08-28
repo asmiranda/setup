@@ -13,6 +13,10 @@ sudo ufw allow 49152:65535/tcp
 sudo apt-get update -y
 sudo apt-get install coturn -y
 
+sudo cp ${setup_dir}/conf.d/coturn /etc/default
+sudo cp ${setup_dir}/conf.d/turnserver.conf /etc
+
+sudo service coturn restart
 
 sudo ufw enable
 
