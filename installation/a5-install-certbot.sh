@@ -9,7 +9,7 @@ sudo systemctl stop nginx.service
 
 sudo apt-get install certbot -y
 
-certbot certonly --cert-name dynamikosoft.com -d ${subdomain}dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
+certbot certonly -d ${subdomain}dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
 # sudo mv /etc/letsencrypt/live/dynamikosoft.com* /etc/letsencrypt/live/dynamikosoft.com
 
 sudo systemctl restart nginx.service
