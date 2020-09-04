@@ -1,4 +1,4 @@
-echo "***********Start VPS Setup************"
+echo "***********Start Provision Client Setup************"
 
 export setup_dir=$(pwd)
 export setup_tmp=/root/tmp
