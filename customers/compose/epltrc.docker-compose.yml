@@ -1,13 +1,6 @@
 version: '3'
 
 services:
-  mysql:
-    image: mysql:8.0.21
-    container_name: "MySQL"
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=Miran!11
   
   dynamiko-ui:
     image: niq77avie/dynamiko-ui
@@ -16,7 +9,7 @@ services:
       - /home/alex/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html
       - /etc/letsencrypt/live/dynamikosoft.com:/etc/nginx/certs
     ports:
-      - "7777:7777"
+      - "7001:7001"
 
   dynamiko-service:
     image: niq77avie/dynamiko-python-service
@@ -25,10 +18,10 @@ services:
       - /home/alex/innovation/dynamiko/server/dynamiko-python-service:/app
       - /etc/letsencrypt/live/dynamikosoft.com:/app/certs
     ports:
-      - "8888:8888"
+      - "8001:8888"
     environment:
       - DYNAMIKO_DOMAIN=mysql
-      - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@dynamikosoft.com:3306/dynamikodb
+      - MYSQL_URL=mysql+pymysql://epltrc:epltrc@dynamikosoft.com:3306/epltrc
 
 volumes:
   portainer_data:
