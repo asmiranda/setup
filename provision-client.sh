@@ -7,7 +7,7 @@ if [ "$1" != "" ]; then
 else
     export subdomain=""
 fi
-echo "subdomain=="+${subdomain}
+echo "subdomain=="${subdomain}
 
 export setup_dir=$(pwd)
 export setup_tmp=/root/tmp
