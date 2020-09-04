@@ -19,7 +19,7 @@ services:
     ports:
       - "8888:8888"
     environment:
-      - DOMAIN=|subdomain|dynamikosoft.com
+      - DYNAMIKO_DOMAIN=|subdomain|dynamikosoft.com
       - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@|subdomain|dynamikosoft.com:3306/dynamikodb
 
 volumes:
