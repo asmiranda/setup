@@ -9,8 +9,11 @@ sudo systemctl stop nginx.service
 
 sudo apt-get install certbot -y
 
-certbot certonly -d ${subdomain}dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
-# sudo mv /etc/letsencrypt/live/dynamikosoft.com* /etc/letsencrypt/live/dynamikosoft.com
+# this is the old script that must be run in ssh
+# certbot certonly -d *.dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
+
+# this is the new code to be run on each client (ei. epltrc)
+# certbot certonly --manual --preferred-challenges=dns --email aiamemiranda@gmail.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d *.dynamikosoft.com
 
 sudo systemctl restart nginx.service
 
