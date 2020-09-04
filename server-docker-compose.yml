@@ -6,6 +6,7 @@ services:
     container_name: "Dynamiko_UI"
     volumes:
       - /home/alex/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html
+      - /etc/letsencrypt/live/dynamikosoft.com:/etc/nginx/certs
     ports:
       - "7777:7777"
 
