@@ -8,6 +8,10 @@ cd ${setup_dir}/customers
 docker-compose -f ./compose/epltrc.docker-compose.yml stop
 docker-compose -f ./compose/epltrc.docker-compose.yml up -d
 
+sudo cp ${setup_dir}/conf.d/epltrc-nginx-proxy.conf /etc/nginx/sites-available/epltrc-nginx-proxy.conf
+sudo ln -s /etc/nginx/sites-available/epltrc-nginx-proxy.conf /etc/nginx/sites-enabled/epltrc-nginx-proxy.conf
+sudo systemctl restart nginx.service
+
 echo "EPLTRC Up and Running"
 
 cd ${setup_dir}
