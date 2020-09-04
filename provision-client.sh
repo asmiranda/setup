@@ -1,5 +1,14 @@
 echo "***********Start Provision Client Setup************"
 
+export subdomain=""
+
+if [ "$1" != "" ]; then
+    export subdomain=$1
+else
+    export subdomain=""
+fi
+echo "subdomain=="+${subdomain}
+
 export setup_dir=$(pwd)
 export setup_tmp=/root/tmp
 
@@ -17,9 +26,9 @@ sudo mkdir ${setup_tmp}/migration
 # installation/4-install-portainer.sh
 # installation/5-install-mysql.sh
 # note: need to manually connect as  root to mysql thru webmin before resume.
-
 # installation/7-install-nginx.sh
 # installation/8-install-php.sh
+
 installation/a1-install-wordpress.sh
 installation/a2-install-dynamiko-docker.sh
 installation/a3-install-nginxproxy.sh
