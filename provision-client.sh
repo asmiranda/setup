@@ -30,8 +30,8 @@ sudo mkdir ${setup_tmp}/migration
 # installation/8-install-php.sh
 
 # installation/a1-install-wordpress.sh
-installation/a2-install-dynamiko-docker.sh
-installation/a3-install-nginxproxy.sh
+# installation/a2-install-dynamiko-docker.sh
+# installation/a3-install-nginxproxy.sh
 # installation/a4-install-python.sh
 installation/a5-install-certbot.sh
 # installation/a7-install-coturn.sh
