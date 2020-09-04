@@ -19,15 +19,5 @@ services:
     environment:
       - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@dynamikosoft.com:3306/dynamikodb
 
-  epltrc:
-    image: niq77avie/dynamiko-python-service
-    container_name: "EPLTRC"
-    volumes:
-      - /home/alex/innovation/dynamiko/server/dynamiko-python-service:/app
-    ports:
-      - "8701:8888"
-    environment:
-      - MYSQL_URL=mysql+pymysql://epltrc:epltrc@dynamikosoft.com:3306/epltrc
-
 volumes:
   portainer_data:
