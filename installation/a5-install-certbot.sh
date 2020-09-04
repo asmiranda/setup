@@ -11,6 +11,7 @@ sudo apt-get install certbot -y
 sudo rm -r /etc/letsencrypt/live/*
 
 certbot certonly --cert-name dynamikosoft.com -d ${subdomain}dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
+mv dynamikosoft.com* dynamikosoft.com
 
 sudo systemctl restart nginx.service
 
