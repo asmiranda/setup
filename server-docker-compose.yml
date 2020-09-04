@@ -15,7 +15,7 @@ services:
     volumes:
       - /home/alex/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html
     ports:
-      - "7777:7777"
+      - "7777:80"
 
   dynamiko-service:
     image: niq77avie/dynamiko-python-service
