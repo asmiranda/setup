@@ -8,7 +8,7 @@ cd ${setup_tmp}/certbot
 sudo systemctl stop nginx.service
 
 sudo apt-get install certbot -y
-certbot certonly --cert-name dynamikosoft.com -d dynamikosoft.com -d www.dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
+certbot certonly --cert-name dynamikosoft.com -d *.dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
 
 sudo systemctl restart nginx.service
 
