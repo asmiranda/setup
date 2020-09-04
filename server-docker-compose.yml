@@ -27,7 +27,7 @@ services:
     ports:
       - "8888:8888"
     environment:
-      - DYNAMIKO_DOMAIN=mysql
+      - DYNAMIKO_DOMAIN=dynamikosoft.com
       - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@dynamikosoft.com:3306/dynamikodb
 
 volumes:
