@@ -24,7 +24,7 @@ installation/1-install-getsource.sh
 # installation/2-install-webmin.sh
 # installation/3-install-docker.sh
 # installation/4-install-portainer.sh
-installation/5-install-mysql.sh
+# installation/5-install-mysql.sh
 # installation/7-install-nginx.sh
 # installation/8-install-php.sh
 

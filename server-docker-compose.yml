@@ -1,6 +1,14 @@
 version: '3'
 
 services:
+  mysql:
+    image: mysql:8.0.21
+    container_name: "MySQL"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=Miran!11
+  
   dynamiko-ui:
     image: niq77avie/dynamiko-ui
     container_name: "Dynamiko_UI"
@@ -19,8 +27,8 @@ services:
     ports:
       - "8888:8888"
     environment:
-      - DYNAMIKO_DOMAIN=|subdomain|dynamikosoft.com
-      - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@|subdomain|dynamikosoft.com:3306/dynamikodb
+      - DYNAMIKO_DOMAIN=mysql
+      - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@mysql:3306/dynamikodb
 
 volumes:
   portainer_data:
