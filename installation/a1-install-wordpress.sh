@@ -14,7 +14,7 @@ sudo mv /root/tmp/wordpress/wordpress /var/www/wordpress
 
 sudo rm /etc/nginx/sites-available/wordpress.conf
 sudo cp ${setup_dir}/conf.d/wordpress.conf /etc/nginx/sites-available/wordpress.conf
-sudo sed -i 's/|subdomain|/'+${subdomain}+'/g' /etc/nginx/sites-available/wordpress.conf
+sudo sed -i 's/|subdomain|/'${subdomain}'/g' /etc/nginx/sites-available/wordpress.conf
 
 sudo chown -R www-data:www-data /var/www/wordpress/
 sudo chmod -R 755 /var/www/wordpress/
