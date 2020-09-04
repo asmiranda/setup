@@ -8,8 +8,6 @@ cp ./server-docker-compose.yml ./docker-compose.yml
 docker-compose stop
 docker-compose up -d
 
-git checkout .
-
 echo "Dynamiko Compose Up and Running"
 
 cd ${setup_dir}
