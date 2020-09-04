@@ -26,7 +26,7 @@ services:
       - "8888:8888"
     environment:
       - DYNAMIKO_DOMAIN=mysql
-      - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@mysql:3306/dynamikodb
+      - MYSQL_URL=mysql+pymysql://dynamikodb:dynamikodb@localhost:3306/dynamikodb
 
   # dynamiko-coturn:
   #   image: instrumentisto/coturn

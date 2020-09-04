@@ -14,7 +14,6 @@ services:
     container_name: "Dynamiko_UI"
     volumes:
       - /home/alex/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html
-      - /etc/letsencrypt/live/dynamikosoft.com:/etc/nginx/certs
     ports:
       - "7777:7777"
 
@@ -23,7 +22,6 @@ services:
     container_name: "Dynamiko_Service"
     volumes:
       - /home/alex/innovation/dynamiko/server/dynamiko-python-service:/app
-      - /etc/letsencrypt/live/dynamikosoft.com:/app/certs
     ports:
       - "8888:8888"
     environment:
