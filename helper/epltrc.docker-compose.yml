@@ -5,6 +5,7 @@ services:
     image: niq77avie/dynamiko-ui
     container_name: "EPLTRC_UI"
     volumes:
+      - /home/alex/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html
       - /etc/letsencrypt/live/dynamikosoft.com:/etc/nginx/certs
     ports:
       - "7001:443"
@@ -13,6 +14,7 @@ services:
     image: niq77avie/dynamiko-python-service
     container_name: "EPLTRC_Service"
     volumes:
+      - /home/alex/innovation/dynamiko/server/dynamiko-python-service:/app
       - /etc/letsencrypt/live/dynamikosoft.com:/app/certs
     ports:
       - "8001:8888"
