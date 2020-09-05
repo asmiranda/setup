@@ -9,7 +9,6 @@ cd ${setup_tmp}/nginxproxy
 sudo rm /etc/nginx/sites-available/wordpress.conf
 sudo rm /etc/nginx/sites-available/nginx-proxy.conf
 sudo cp ${setup_dir}/conf.d/nginx-proxy.conf /etc/nginx/sites-available/nginx-proxy.conf
-sudo sed -i 's/|subdomain|/'${subdomain}'/g' /etc/nginx/sites-available/nginx-proxy.conf
 
 sudo rm /etc/nginx/sites-enabled/wordpress.conf
 sudo rm /etc/nginx/sites-enabled/nginx-proxy.conf

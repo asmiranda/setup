@@ -27,6 +27,9 @@ installation/a3-install-nginxproxy.sh
 # installation/a7-install-coturn.sh
 # installation/a8-install-firewall.sh
 
+# clients
+installation/client-deploy-epltrc.sh
+
 sudo ufw disable 
 
 
