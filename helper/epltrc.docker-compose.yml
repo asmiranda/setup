@@ -1,18 +1,17 @@
 version: '3'
 
-services:
-  
-  dynamiko-ui:
+services:  
+  epltrc-ui:
     image: niq77avie/dynamiko-ui
-    container_name: "Dynamiko_UI"
+    container_name: "EPLTRC_UI"
     volumes:
       - /etc/letsencrypt/live/dynamikosoft.com:/etc/nginx/certs
     ports:
       - "7001:443"
 
-  dynamiko-service:
+  epltrc-service:
     image: niq77avie/dynamiko-python-service
-    container_name: "Dynamiko_Service"
+    container_name: "EPLTRC_Service"
     volumes:
       - /etc/letsencrypt/live/dynamikosoft.com:/app/certs
     ports:
