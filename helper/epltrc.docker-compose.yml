@@ -19,8 +19,7 @@ services:
     ports:
       - "8001:8888"
     environment:
-      - DYNAMIKO_DOMAIN=dynamikosoft.com
-      - MYSQL_URL=mysql+pymysql://epltrc:epltrc@dynamikosoft.com:3306/epltrc
+      - DATABASE_URI=mysql+pymysql://epltrc:epltrc@dynamikosoft.com:3306/epltrc
 
 volumes:
   portainer_data:
