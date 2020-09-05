@@ -16,7 +16,7 @@ services:
       - /home/alex/innovation/dynamiko/ui/dynamiko-ui:/usr/share/nginx/html
       - /etc/letsencrypt/live/dynamikosoft.com:/etc/nginx/certs
     ports:
-      - "7777:80"
+      - "7777:443"
 
   dynamiko-service:
     image: niq77avie/dynamiko-python-service
