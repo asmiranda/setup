@@ -25,7 +25,7 @@ services:
       - /home/alex/innovation/dynamiko/server/dynamiko-python-service:/app
       - /etc/letsencrypt/live/dynamikosoft.com:/app/certs
     ports:
-      - "8888:8888"
+      - "8777:8888"
     environment:
       - DATABASE_URI=mysql+pymysql://dynamikodb:dynamikodb@dynamikosoft.com:3306/dynamikodb
 
