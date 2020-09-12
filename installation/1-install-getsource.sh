@@ -8,6 +8,12 @@ cd /home/alex/innovation/dynamiko/server/dynamiko-python-service
 sudo git checkout .
 sudo git pull
 
+cd /home/alex/innovation/dynamiko/server
+sudo git clone https://asmiranda:080531Miranda!@github.com/asmiranda/dynamiko-java-service.git
+cd /home/alex/innovation/dynamiko/server/dynamiko-java-service
+sudo git checkout .
+sudo git pull
+
 cd /home/alex/innovation/dynamiko/ui
 sudo git clone https://asmiranda:080531Miranda!@github.com/asmiranda/dynamiko-ui.git
 cd /home/alex/innovation/dynamiko/ui/dynamiko-ui

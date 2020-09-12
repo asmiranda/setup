@@ -13,7 +13,7 @@ sudo apt-get install certbot -y
 # certbot certonly -d *.dynamikosoft.com -m aiamemiranda@gmail.com --standalone --agree-tos
 
 # this is the new code to be run on each client (ei. epltrc)
-# certbot certonly --manual --preferred-challenges=dns --email aiamemiranda@gmail.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d *.dynamikosoft.com
+# certbot certonly --manual --preferred-challenges=dns --email aiamemiranda@gmail.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d *.dynamikosoft.com -d www.*.dynamikosoft.com
 
 sudo systemctl restart nginx.service
 

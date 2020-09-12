@@ -1,0 +1,11 @@
+docker run -p 1234:80 
+-e WORDPRESS_DB_HOST=dynamikosoft.com:3306 
+-e WORDPRESS_DB_NAME=dynamikowp 
+-e WORDPRESS_DB_USER=dynamikowp 
+-e WORDPRESS_DB_PASSWORD=dynamikowp 
+-v C:/Work/innovation/CustomerData/epltrcwp/wp_content:/var/www/html/wp-content 
+-v C:/Work/innovation/CustomerData/epltrcwp/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini 
+wordpress:5.1.1-php7.3-apache
+
+
+docker run -p 7101:80 -e WORDPRESS_DB_HOST=dynamikosoft.com:3306 -e WORDPRESS_DB_NAME=dynamikowp -e WORDPRESS_DB_USER=dynamikowp -e WORDPRESS_DB_PASSWORD=dynamikowp -v /home/alex/innovation/wp/dynamiko/wp_content:/var/www/html/wp-content -v /home/alex/innovation/wp/dynamiko/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini wordpress:5.1.1-php7.3-apache
