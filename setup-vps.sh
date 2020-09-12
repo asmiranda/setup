@@ -16,7 +16,7 @@ installation/1-install-getsource.sh
 # installation/4-install-portainer.sh
 # note: need to manually connect as  root to mysql thru webmin before resume.
 
-installation/7-install-nginx.sh
+# installation/7-install-nginx.sh
 # installation/a2-install-dynamiko-docker.sh
 installation/a3-install-nginxproxy.sh
 # installation/a4-install-python.sh
