@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  new-site-wordpress:
+    container_name: DYNAMIKO_WP
+    image: wordpress:latest
+    restart: unless-stopped
+    volumes:
+      - /home/alex/innovation/wordpress:/var/www/html
+      - ./conf.d/php.ini:/usr/local/etc/php/conf.d/php.ini
+    environment:
+      WORDPRESS_DB_HOST: dynamikosoft.com:3306
+      WORDPRESS_DB_NAME: dynamikowp
+      WORDPRESS_DB_USER: dynamikowp
+      WORDPRESS_DB_PASSWORD: dynamikowp
+      WORDPRESS_TABLE_PREFIX: wp_
+      VIRTUAL_HOST: dynamikosoft.com, www.dynamikosoft.com 
+      LETSENCRYPT_HOST: dynamikosoft.com, www.dynamikosoft.com 
+      LETSENCRYPT_EMAIL: aiamemiranda@gmail.com
+    logging:
+      options:
+        max-size: 200k
+
+networks:
+   default:
+     external:
+       name: webproxy

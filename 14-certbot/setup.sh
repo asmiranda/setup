@@ -1,9 +1,11 @@
-echo "A5 - ************Start Certbot Setup************"
+export setup_dir=$(pwd)
+export setup_tmp=/root/tmp
 
-cd ${setup_dir}
+sudo git checkout .
+sudo git pull 
+sudo mkdir ${setup_tmp} && cd ${setup_dir}
 
-sudo mkdir ${setup_tmp}/certbot
-cd ${setup_tmp}/certbot
+echo "************Start Certbot Setup************"
 
 sudo systemctl stop nginx.service
 

@@ -1,3 +1,11 @@
+export setup_dir=$(pwd)
+export setup_tmp=/root/tmp
+
+sudo git checkout .
+sudo git pull 
+sudo mkdir ${setup_tmp} && cd ${setup_dir}
+
+
 echo "1 - ************Start Dynamiko GetSource************"
 
 sudo git config credential.helper store
@@ -15,7 +23,5 @@ sudo git checkout .
 sudo git pull
 
 cd ${setup_dir}
-sudo chmod -R 777 .
-sudo chmod -R 777 installation/.
 
 pwd
