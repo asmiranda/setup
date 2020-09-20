@@ -10,7 +10,7 @@ echo "************Start Email Setup************"
 sudo useradd -p $(openssl passwd -1 Miran!11) -s /bin/bash -d /home/admin/ -m -G sudo admin
 cd /
 sudo mkdir mailu && cd mailu
-sudo cp ${setup_dir}/. /mailu/.
+sudo cp -r ${setup_dir}/. /mailu/.
 sudo docker-compose -p mailu exec admin flask mailu admin admin dynamikosoft.com Miran!11
 
 cd ${setup_dir}
