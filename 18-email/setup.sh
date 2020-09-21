@@ -1,17 +1,16 @@
 export setup_dir=$(pwd)
 export setup_tmp=/root/tmp
 
+# use https://www.linode.com/docs/email/mail-in-a-box/how-to-create-an-email-server-with-mail-in-a-box/
+
 sudo git checkout .
 sudo git pull 
 sudo mkdir ${setup_tmp} && cd ${setup_dir}
 
 echo "************Start Email Setup************"
 
-sudo useradd -p $(openssl passwd -1 Miran!11) -s /bin/bash -d /home/admin/ -m -G sudo admin
-cd /
-sudo mkdir mailu 
+sudo apt-get update && sudo apt-get upgrade
+curl -s https://mailinabox.email/setup.sh | sudo bash
 
-cd ${setup_dir}
-sudo docker-compose up -d
 
 cd ${setup_dir}
