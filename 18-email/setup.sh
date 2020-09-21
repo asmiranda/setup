@@ -8,6 +8,7 @@ sudo git pull
 sudo mkdir ${setup_tmp} && cd ${setup_dir}
 
 echo "************Start Email Setup************"
+# need to do this in the terminal
 
 sudo apt-get update && sudo apt-get upgrade
 curl -s https://mailinabox.email/setup.sh | sudo bash
