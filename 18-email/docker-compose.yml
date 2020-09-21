@@ -40,7 +40,7 @@ services:
       - "127.0.0.1:993:993"
       - "::1:993:993"
     volumes:
-      - "/mailu/certs:/certs"
+      - "/etc/letsencrypt/live:/certs"
       - "/mailu/overrides/nginx:/overrides"
 
 
