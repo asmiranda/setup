@@ -21,24 +21,15 @@ services:
     logging:
       driver: json-file
     ports:
-      - "127.0.0.1:80:80"
-      - "::1:80:80"
-      - "127.0.0.1:443:443"
-      - "::1:443:443"
-      - "127.0.0.1:25:25"
-      - "::1:25:25"
-      - "127.0.0.1:465:465"
-      - "::1:465:465"
-      - "127.0.0.1:587:587"
-      - "::1:587:587"
-      - "127.0.0.1:110:110"
-      - "::1:110:110"
-      - "127.0.0.1:995:995"
-      - "::1:995:995"
-      - "127.0.0.1:143:143"
-      - "::1:143:143"
-      - "127.0.0.1:993:993"
-      - "::1:993:993"
+      - "80:80"
+      - "443:443"
+      - "25:25"
+      - "465:465"
+      - "587:587"
+      - "110:110"
+      - "995:995"
+      - "143:143"
+      - "993:993"
     volumes:
       - "/etc/letsencrypt/live:/certs"
       - "/mailu/overrides/nginx:/overrides"
@@ -51,6 +42,7 @@ services:
     volumes:
       - "/mailu/data:/data"
       - "/mailu/dkim:/dkim"
+      - "/etc/letsencrypt/live:/certs"
     depends_on:
       - redis
 
@@ -83,26 +75,6 @@ services:
       - "/mailu/overrides/rspamd:/etc/rspamd/override.d"
     depends_on:
       - front
-
-  # Optional services
-  antivirus:
-    image: ${DOCKER_ORG:-mailu}/${DOCKER_PREFIX:-}clamav:${MAILU_VERSION:-1.7}
-    restart: always
-    env_file: mailu.env
-    volumes:
-      - "/mailu/filter:/data"
-
-  webdav:
-    image: ${DOCKER_ORG:-mailu}/${DOCKER_PREFIX:-}radicale:${MAILU_VERSION:-1.7}
-    restart: always
-    env_file: mailu.env
-    volumes:
-      - "/mailu/dav:/data"
-
-  fetchmail:
-    image: ${DOCKER_ORG:-mailu}/${DOCKER_PREFIX:-}fetchmail:${MAILU_VERSION:-1.7}
-    restart: always
-    env_file: mailu.env
 
   # Webmail
   webmail:
