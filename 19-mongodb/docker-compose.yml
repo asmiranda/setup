@@ -16,10 +16,5 @@ services:
     volumes:
       - /root/tmp/mongo/db:/data/db
       - /root/setup/19-mongodb/:/docker-entrypoint-initdb.d
-    # ports:
-    # - 27017:27017
-    networks:
-      - todo-network
-networks:
-  todo-network:
-    driver: bridge
+    ports:
+    - 27017:27017
