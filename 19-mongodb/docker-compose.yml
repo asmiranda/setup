@@ -1,14 +1,16 @@
-mongo:
-  image: mongo
-  restart: unless-stopped
-  environment:
-    MONGO_INITDB_ROOT_USERNAME: dynamiko
-    MONGO_INITDB_ROOT_PASSWORD: dynamiko
+version: '3'
 
-mongo-express:
-  image: mongo-express
-  ports:
-    - 8081:8081
-  environment:
-    ME_CONFIG_MONGODB_ADMINUSERNAME: dynamiko
-    ME_CONFIG_MONGODB_ADMINPASSWORD: dynamiko
+services:
+  mongodb:
+    image: bitnami/mongodb
+    container_name: "MongoDB"
+    ports:
+      - "27017:27017"
+      - "28017:28017"
+    environment:
+      - MONGODB_USERNAME=dynamiko
+      - MONGODB_PASSWORD=dynamiko
+      - MONGODB_DATABASE=dynamiko
+    volumes:
+      - /home/alex/innovation/mongodata:/bitnami/mongodb
+        
