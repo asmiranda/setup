@@ -35,5 +35,5 @@ services:
       - MONGODB_PASSWORD=dynamiko
       - MONGODB_DATABASE=dynamiko
     volumes:
-      - /home/alex/innovation/mongodata/lawfirm:/bitnami/mongodb
+      - /home/alex/innovation/mongodata/ecommerce:/bitnami/mongodb
     
