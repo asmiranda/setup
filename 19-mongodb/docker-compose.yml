@@ -25,3 +25,15 @@ services:
     volumes:
       - /home/alex/innovation/mongodata/lawfirm:/bitnami/mongodb
         
+  mongoecommerce:
+    image: bitnami/mongodb
+    container_name: "MongoECommerce"
+    ports:
+      - "27703:27017"
+    environment:
+      - MONGODB_USERNAME=dynamiko
+      - MONGODB_PASSWORD=dynamiko
+      - MONGODB_DATABASE=dynamiko
+    volumes:
+      - /home/alex/innovation/mongodata/lawfirm:/bitnami/mongodb
+    
