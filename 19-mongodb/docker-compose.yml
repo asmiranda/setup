@@ -1,16 +1,27 @@
 version: '3'
 
 services:
-  mongodb:
+  mongoschool:
     image: bitnami/mongodb
-    container_name: "MongoDB"
+    container_name: "MongoSchool"
     ports:
-      - "27017:27017"
-      - "28017:28017"
+      - "27701:27017"
     environment:
       - MONGODB_USERNAME=dynamiko
       - MONGODB_PASSWORD=dynamiko
       - MONGODB_DATABASE=dynamiko
     volumes:
-      - /home/alex/innovation/mongodata:/bitnami/mongodb
+      - /home/alex/innovation/mongodata/school:/bitnami/mongodb
+
+  mongolawfirm:
+    image: bitnami/mongodb
+    container_name: "MongoLawFirm"
+    ports:
+      - "27702:27017"
+    environment:
+      - MONGODB_USERNAME=dynamiko
+      - MONGODB_PASSWORD=dynamiko
+      - MONGODB_DATABASE=dynamiko
+    volumes:
+      - /home/alex/innovation/mongodata/lawfirm:/bitnami/mongodb
         
