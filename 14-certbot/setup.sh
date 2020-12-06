@@ -19,6 +19,11 @@ sudo apt-get install certbot -y
 #certbot certonly --manual --preferred-challenges=dns --email aiamemiranda@gmail.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d dynamikosoft.com
 #certbot certonly --manual --preferred-challenges=dns --email aiamemiranda@gmail.com --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d mail.dynamikosoft.com
 
+# to renew 
+# 1. All live dynamikosoft.com should be symlink
+# then run the script
+# certbot renew
+
 sudo systemctl restart nginx.service
 
 cd ${setup_dir}
